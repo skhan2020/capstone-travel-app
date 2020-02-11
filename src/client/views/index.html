@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Travel Query</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        Travel Query App
+      </div>
+      <div class="main">
+          <form>
+            <div class="holder">
+                <label for="place">My Trip To:</label>
+                <input type="text" id="place" placeholder="Enter place">
+            </div>
+            <div class="holder feel">
+                <label for="departDate">Departing:</label>
+                <input type="text" id="departDate" placeholder="mm/dd/yyyy">
+            </div>
+            <div class="buttonBox">
+                <button id="save" type="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> Save Trip </button>
+                <button id="remove" type="reset" onclick="return Client.handleClear(event)" onsubmit="return Client.handleClear(event)"> Remove Trip </button>
+            </div>
+        </form>
+        <div id="result">
+          <div id="placeImage"></div>
+          <div id="placeDetail" class="info"></div> 
+          <div id="weather" class="info"></div>
+          <div id="temp" class="info-sub"></div>
+          <div id="details" class="info-sub"></div>
+        </div>
+      </div>
+      <footer>
+          <p>Copyright © 2020 by Samina Travel Co.</p>
+      </footer>
+    </div>
+  </body>
+</html>

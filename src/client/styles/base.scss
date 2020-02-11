@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app {
+    flex: 2;
+    width: 100%;
+    background-image: url('https://pixabay.com/get/57e4d24b4253ac14f6da8c7dda79367b1438dfe356596c4870277ad0964cc45cbc_1280.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    font-family: sans-serif;
+    min-height: 1000px;
+    
+    #placeImage {
+        background-image: url('https://pixabay.com/get/52e0d2434c5ab108f5d084609629327f123ed8e05b4c704c7d2e7fd5964cc15c_1280.jpg'); 
+        background-size: cover;
+        background-position: center;
+        width: 400px;
+        height: 300px;
+    }
+    
+    .holder{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .main{
+        background: rgba(36, 38, 41, 0.6);
+        width: 75%;
+        min-height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+    #content {
+        padding-top: 15px;
+        color: #d5ebeb;
+    }
+    
+    .info{
+        padding-bottom: 5px;
+    }
+
+    .title{
+        padding: 20px;
+        text-decoration: underline;
+    }
+    /* Reset style for HTML element on active to have no border*/
+    input:focus,
+    button:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    #app {
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 0px;
+            min-height: 800px;
+        }
+    
+        #placeImage {
+            width: 300px;
+            height: 250px;
+        }
+    }
+  }

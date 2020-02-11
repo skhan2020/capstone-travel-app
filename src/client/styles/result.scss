@@ -1,0 +1,28 @@
+
+    #result {
+      line-height: 35px;
+      text-align: left;
+      padding-top: 20px;
+      margin-top: 50px;
+      min-height: 100px;
+
+      .info {
+        padding-top: 30px;
+        color: rgb(241, 248, 248);
+        font-size: 22px;
+      }
+
+      .info-sub {
+        font-family: 'Handlee', cursive;
+        color: rgb(241, 248, 248);
+        font-size: 22px;
+      }
+  }
+
+
+  @media (max-width: 1000px) {
+      #result {
+          margin-top: 0px;
+          margin: auto;
+      }
+    }

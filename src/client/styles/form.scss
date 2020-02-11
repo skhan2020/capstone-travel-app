@@ -1,0 +1,57 @@
+form {
+    font-size: 15px;
+    padding: 50px;
+    padding-top: 80px;
+    /*  Basic Styling To Override Default For Basic HTML Elements */
+    label{
+        display:block;
+        height: 43px;
+        line-height: 43px;
+        color: white;
+        background-color: black;
+        width: 100px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    input{
+        font-size: 15px;
+        height: 40px;
+        width: 250px;
+        background: #F0FAFA;
+        font-family: sans-serif;
+        border-style: solid;
+        border-width: thin;
+        border-color: #000000;
+        display: inline-block;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    .buttonBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button{
+        font-size: 15px;
+        margin-top: 50px;
+        margin-left: 10px;
+        width: 170px;
+        height: 43px;
+        background-color: #000000;
+        font-family: sans-serif;
+        border: none;
+        box-shadow: 2px 4px 5px #444;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    form {
+        padding-top: 30px;
+    }
+  }
