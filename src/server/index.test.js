@@ -16,13 +16,19 @@ const mockRequest = (sessionData) => {
 test('should return right weatherAPIUrl', async () => {
   const req = mockRequest();
   const res = mockResponse();
+  const currentEnv = process.env;
+  process.env = { DS_API_ID: 'test', PIXABAY_API_ID: 'testPIX' };
   await appGetWeatherURL(req, res);
-  expect(res.send).toHaveBeenCalledWith({ apiUrl: 'https://api.darksky.net/forecast/e0a74fe78340df25f91e2e31baebbc84/'});
+  expect(res.send).toHaveBeenCalledWith({ apiUrl: 'https://api.darksky.net/forecast/test/'});
+  process.env = currentEnv;
 });
 
 test('should return right pictureAPIUrl', async () => {
   const req = mockRequest();
   const res = mockResponse();
+  const currentEnv = process.env;
+  process.env = { DS_API_ID: 'test', PIXABAY_API_ID: 'testPIX' };
   await appGetPictureURL(req, res);
-  expect(res.send).toHaveBeenCalledWith({ apiUrl: 'https://pixabay.com/api/?key=15171658-12e7fafe9b837537f31c1cadb'});
+  expect(res.send).toHaveBeenCalledWith({ apiUrl: 'https://pixabay.com/api/?key=testPIX'});
+  process.env = currentEnv;
 });

@@ -10,11 +10,13 @@ form {
         color: white;
         background-color: black;
         width: 100px;
+        min-width: 76px;
         margin-top: 20px;
         text-align: center;
     }
     
     input{
+        min-width: 100px;
         font-size: 15px;
         height: 40px;
         width: 250px;
@@ -40,12 +42,19 @@ form {
         margin-left: 10px;
         width: 170px;
         height: 43px;
+        min-width: 76px;
         background-color: #000000;
         font-family: sans-serif;
         border: none;
         box-shadow: 2px 4px 5px #444;
         color: white;
         cursor: pointer;
+        &:hover {
+            background-color: #252930;
+            border-style: solid;
+            border-width: thin;
+            border-color: rgb(129, 162, 194);
+        }
     }
 }
 
@@ -53,5 +62,6 @@ form {
 @media (max-width: 1000px) {
     form {
         padding-top: 30px;
+        padding-bottom: 5px;
     }
   }

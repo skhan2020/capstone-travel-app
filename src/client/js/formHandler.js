@@ -42,7 +42,12 @@ function handleSubmit(event) {
         getPlaceImage(reqUrl, place)
         .then(res => {
             const imageBox = document.getElementById('placeImage');
-            imageBox.style.backgroundImage = `url(${res.imageURL})`;
+            if (res.imageURL) {
+                imageBox.style.backgroundImage = `url(${res.imageURL})`;
+            } else {
+                imageBox.style.backgroundImage = '';
+                imageBox.classList.add("placeImage", "newImage");
+            }
         })
     })
 }
@@ -124,7 +129,6 @@ const getPictureDataUrl = async () => {
 
 /* Function to GET Web API Data*/
 const getPlaceImage = async (reqURL, place) => {
-  const defaultImage = 'https://pixabay.com/get/55e2d645485aa914f6da8c7dda79367b1438dfe356596c4870277ad0934bc55bbf_1280.jpg'
   const requestUrl = `${reqURL.apiUrl}&q=${place}&image_type=photo`
   const request = await fetch(requestUrl);
   try {
@@ -132,7 +136,7 @@ const getPlaceImage = async (reqURL, place) => {
     // return allData;
     const image = data.hits.length && data.hits[0].webformatURL;
     console.log(image);
-    return {imageURL: image || defaultImage};
+    return {imageURL: image};
   }
   catch(error) {
     console.log('error',error);

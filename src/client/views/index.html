@@ -13,7 +13,7 @@
       <div class="main">
           <form>
             <div class="holder">
-                <label for="place">My Trip To:</label>
+                <label for="place">Trip To:</label>
                 <input type="text" id="place" placeholder="Enter place">
             </div>
             <div class="holder feel">
@@ -22,7 +22,7 @@
             </div>
             <div class="buttonBox">
                 <button id="save" type="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"> Save Trip </button>
-                <button id="remove" type="reset" onclick="return Client.handleClear(event)" onsubmit="return Client.handleClear(event)"> Remove Trip </button>
+                <button id="remove" type="reset"> Remove Trip </button>
             </div>
         </form>
         <div id="result">
@@ -37,5 +37,14 @@
           <p>Copyright © 2020 by Samina Travel Co.</p>
       </footer>
     </div>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+  </script>
   </body>
 </html>

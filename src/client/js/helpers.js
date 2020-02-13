@@ -8,6 +8,7 @@ function getTimeFromDate(date) {
   let mydate = new Date(parts[2], parts[0] - 1, parts[1]); 
   return mydate.getTime();
 }
+
 function days_between(date1, date2) {
   const ONE_DAY = 1000 * 60 * 60 * 24;
   const differenceMs = Math.abs(date1 - date2);

@@ -17,12 +17,34 @@
         color: rgb(241, 248, 248);
         font-size: 22px;
       }
+    
+      #placeImage {
+          background-image: url('../assets/photographer-407068_640.jpg'); 
+          background-size: cover;
+          background-position: center;
+          width: 400px;
+          height: 300px;
+      }
+      
+      #newImage {
+          background-image: url('../assets/photographer-407068_640.jpg'); 
+      }
+      
   }
 
-
-  @media (max-width: 1000px) {
-      #result {
-          margin-top: 0px;
-          margin: auto;
+  @media (max-width: 1200px) {
+    #result {
+      margin-left: auto;
+      margin-right: auto;
+      .info {
+        font-size: 18px;
+      }
+      .info-sub {
+        font-size: 18px;
+      }
+      #placeImage {
+          width: 220px;
+          height: 160px;
       }
     }
+  }
